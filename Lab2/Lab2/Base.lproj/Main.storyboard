@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6ZY-mf-13c">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dsg-G0-n4s">
+            <objects>
+                <navigationController id="6ZY-mf-13c" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XXf-fd-4pC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YTa-FD-qEi" kind="relationship" relationship="rootViewController" id="M7G-J3-368"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTO-hw-3us" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-712" y="378"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fCo-zW-TyQ">
+            <objects>
+                <viewController id="YTa-FD-qEi" customClass="ViewController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KoZ-5I-4bX"/>
+                        <viewControllerLayoutGuide type="bottom" id="BhX-7A-Pb8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ihp-bE-mWO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0F-r9-FDs">
+                                <rect key="frame" x="7" y="421" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="RainImage" translatesAutoresizingMaskIntoConstraints="NO" id="m5H-dU-Jp4">
+                                <rect key="frame" x="112" y="72" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5LG-In-KYU"/>
+                                    <constraint firstAttribute="height" constant="150" id="X1n-rG-x04"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UnsureFace" translatesAutoresizingMaskIntoConstraints="NO" id="ufq-d3-Z8n">
+                                <rect key="frame" x="112" y="240" width="150" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's going to rain tonight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SA-Zj-cEl">
+                                <rect key="frame" x="85" y="421" width="204" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="8C6-mV-u9L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYE-mf-MQE">
+                                <rect key="frame" x="169" y="581" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <segue destination="nAS-PE-L6v" kind="push" identifier="next" id="IrW-Wk-Rmk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BhX-7A-Pb8" firstAttribute="top" secondItem="aYE-mf-MQE" secondAttribute="bottom" constant="56" id="9v4-MT-fs3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="F7e-PB-zoA"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="faceImage" destination="ufq-d3-Z8n" id="mkJ-h6-idT"/>
+                        <outlet property="firstLabel" destination="5SA-Zj-cEl" id="sbA-lX-Ob8"/>
+                        <outlet property="weatherImage" destination="m5H-dU-Jp4" id="Bdv-WF-SW5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4uW-qs-KBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="378"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="4LX-av-ifg">
+            <objects>
+                <viewController id="nAS-PE-L6v" customClass="SecondViewController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bZe-vF-MPb"/>
+                        <viewControllerLayoutGuide type="bottom" id="oG6-51-siG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wul-WP-QsW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FloodImage" translatesAutoresizingMaskIntoConstraints="NO" id="wTy-Gx-HWz">
+                                <rect key="frame" x="112" y="72" width="150" height="150"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SadFace" translatesAutoresizingMaskIntoConstraints="NO" id="P7S-o7-5DT">
+                                <rect key="frame" x="112" y="236" width="150" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="There will be flooding too" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiO-MY-1lB">
+                                <rect key="frame" x="74" y="445" width="227" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First View Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHt-nZ-Fqi">
+                                <rect key="frame" x="74" y="416" width="227" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqy-XJ-g41">
+                                <rect key="frame" x="169" y="581" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <segue destination="Bhb-j7-5eZ" kind="push" identifier="next" id="Mej-Dh-Lvu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oG6-51-siG" firstAttribute="top" secondItem="nqy-XJ-g41" secondAttribute="bottom" constant="56" id="x0B-FD-aDq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gv2-I5-kHg"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="faceImage" destination="P7S-o7-5DT" id="23f-OA-DAX"/>
+                        <outlet property="firstViewLabel" destination="SHt-nZ-Fqi" id="hiO-CM-lBo"/>
+                        <outlet property="secondLabel" destination="MiO-MY-1lB" id="qE7-hs-kAk"/>
+                        <outlet property="weatherImage" destination="wTy-Gx-HWz" id="kSj-Cz-XO5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fs7-hc-tAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867.5" y="377.5"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="95n-VM-dze">
+            <objects>
+                <viewController id="Bhb-j7-5eZ" customClass="ThirdViewController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gb2-zg-czI"/>
+                        <viewControllerLayoutGuide type="bottom" id="ek4-Wl-BqK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B3r-qa-dtP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TornadoImage" translatesAutoresizingMaskIntoConstraints="NO" id="gp1-Fv-lnR">
+                                <rect key="frame" x="112" y="72" width="150" height="150"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SurprisedFace" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-jb-mQA">
+                                <rect key="frame" x="112" y="237" width="150" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First View Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5C-hm-PYj">
+                                <rect key="frame" x="67" y="438" width="241" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j9-n3-aga">
+                                <rect key="frame" x="67" y="409" width="241" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second View Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDG-X0-mkL">
+                                <rect key="frame" x="67" y="467" width="241" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="and a possibility of a few tornadoes!!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVw-k5-1jD">
+                                <rect key="frame" x="43" y="496" width="290" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QUU-f5-aqo"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="faceImage" destination="6ES-jb-mQA" id="WO7-Uq-mKd"/>
+                        <outlet property="firstLabel" destination="y5C-hm-PYj" id="Tjv-ns-gDU"/>
+                        <outlet property="secondLabel" destination="bDG-X0-mkL" id="1vH-E1-rQO"/>
+                        <outlet property="thirdLabel" destination="mVw-k5-1jD" id="aKY-j1-2Wh"/>
+                        <outlet property="weatherImage" destination="gp1-Fv-lnR" id="cOc-W7-xMd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBy-9o-eII" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="378"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FloodImage" width="512" height="512"/>
+        <image name="RainImage" width="512" height="512"/>
+        <image name="SadFace" width="309" height="309"/>
+        <image name="SurprisedFace" width="512" height="512"/>
+        <image name="TornadoImage" width="600" height="447"/>
+        <image name="UnsureFace" width="588" height="600"/>
+    </resources>
+</document>
