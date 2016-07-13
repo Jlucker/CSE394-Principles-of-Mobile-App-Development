@@ -1,4 +1,4 @@
-# Principles-of-Mobile-App-Development-Spring 2016
+# Principles-of-Mobile-App-Development-Spring-2016
 
 <h3>Lab1-Part1</h3>
 <ul>
